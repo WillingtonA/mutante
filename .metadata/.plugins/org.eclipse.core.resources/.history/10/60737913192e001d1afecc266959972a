@@ -1,0 +1,18 @@
+package com.caso.mutante.services.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.caso.mutante.dto.MutantDTO;
+import com.caso.mutante.services.Mutante;
+
+
+@Service
+public class MutanteImpl implements Mutante{
+	
+	public String mutant(List<MutantDTO> dna) {
+		System.out.println(dna.toString());
+		return "Hoola desde Service: " + dna.toString();
+	}
+}

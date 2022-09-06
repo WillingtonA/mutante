@@ -1,0 +1,15 @@
+package com.caso.mutante.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MutantDTO {
+	//List<String> dna = new ArrayList<>();
+	public String dna;
+
+	@Override
+	public String toString() {
+		return "MutantDTO [dna=" + dna + "]";
+	}
+	
+}

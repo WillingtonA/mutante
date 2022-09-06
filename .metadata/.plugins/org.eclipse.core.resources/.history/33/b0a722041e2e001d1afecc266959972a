@@ -1,0 +1,29 @@
+package com.caso.mutante.services.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.caso.mutante.dto.MutantDTO;
+import com.caso.mutante.services.Mutante;
+
+
+@Service
+public class MutanteImpl implements Mutante{
+	
+	public Boolean mutant(MutantDTO mutantDto) {
+		System.out.println(mutantDto.toString());
+		/*
+		String str = mutantDto.dna[0];
+		for(int n=0; n<str.length(); n++) { 
+			char c = str.charAt(n);
+			System.out.println(c); 
+		}
+		*/
+		
+		this.valHorizontal(mutantDto);
+		return true;
+	}
+	
+	private int valHorizontal(MutantDTO adn) {
+		return 1;
+	}
+}

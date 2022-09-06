@@ -1,0 +1,5 @@
+package com.caso.mutante.dto;
+
+public class MutantDTO {
+
+}

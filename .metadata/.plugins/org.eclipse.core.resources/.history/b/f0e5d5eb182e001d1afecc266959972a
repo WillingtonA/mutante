@@ -1,0 +1,9 @@
+package com.caso.mutante.services;
+
+import java.util.List;
+
+import com.caso.mutante.dto.MutantDTO;
+
+public interface Mutante {
+	public String mutant(List<MutantDTO> dna);
+}

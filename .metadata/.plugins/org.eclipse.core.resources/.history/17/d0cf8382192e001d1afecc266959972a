@@ -1,0 +1,12 @@
+package com.caso.mutante.dto;
+
+
+public class MutantDTO {
+	public String dna[];
+
+	@Override
+	public String toString() {
+		return "MutantDTO [dna=" + dna[0] + "]";
+	}
+	
+}

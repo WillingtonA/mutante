@@ -1,0 +1,5 @@
+package com.caso.mutante.controllers;
+
+public class EstadisticasController {
+
+}

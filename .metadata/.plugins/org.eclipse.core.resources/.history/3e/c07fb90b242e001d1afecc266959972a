@@ -1,0 +1,67 @@
+package com.caso.mutante.services.impl;
+
+import java.util.Arrays;
+
+import org.springframework.stereotype.Service;
+
+import com.caso.mutante.dto.MutantDTO;
+import com.caso.mutante.services.Mutante;
+
+
+@Service
+public class MutanteImpl implements Mutante{
+	
+	public Boolean mutant(MutantDTO mutantDto) {
+		
+		String dna[][] = new String[6][6];
+		
+		System.out.println("::: " + mutantDto.dna.length);
+		for(int i=0; i<6; i++) {
+			for(int j=0; j<6; j++) {
+				dna[i][j] = String.valueOf(mutantDto.dna[i].charAt(j));
+			}
+		}
+		
+		//System.out.println("::: " + Arrays.toString(dna[0]));
+		
+		/*
+		
+		System.out.println(mutantDto.toString());
+		
+		String str = mutantDto.dna[0];
+		for(int n=0; n<str.length(); n++) { 
+			char c = str.charAt(n);
+			System.out.println(c); 
+		}
+		
+		*/
+		this.valHorizontal(dna);
+		return true;
+	}
+	
+	private int valHorizontal(String[][] dna) {
+		int mutante = 0;
+		for(int i=0; i<6; i++) {
+			mutante = this.valFila(dna[i]);
+			if(mutante > 0) {
+				break;
+			}
+		}
+		return mutante;
+	}
+	
+	
+	private int valFila(String[] fila) {
+		int mutante = 0;
+		int cantidadLetras = 1;
+		for(int i=0; i<5; i++) {
+			cantidadLetras = (fila[i] == fila[i+1]) ? cantidadLetras+1 : 1;
+			if(cantidadLetras >= 4) {
+				//console.log("ARR: ", fila);
+				mutante++;
+			}
+		}
+		System.out.println("mutante: "+ mutante);
+		return mutante;
+	}
+}

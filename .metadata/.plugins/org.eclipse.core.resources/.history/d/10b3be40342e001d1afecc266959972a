@@ -1,0 +1,8 @@
+package com.caso.mutante.services.impl;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EstadisticaServiceImpl implements EstadisticaService {
+
+}

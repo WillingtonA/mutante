@@ -1,0 +1,5 @@
+package com.caso.mutante.services.impl;
+
+public class EstadisticaServiceImpl {
+
+}
